@@ -1,0 +1,10 @@
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\bin\Debug\QLPhongTroDB.dacpac
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\bin\Debug\QLPhongTroDB.dll
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\bin\Debug\QLPhongTroDB.pdb
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\QLPhongTroDB.sqlproj.AssemblyReference.cache
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\Model.xml
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\refactor.xml
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\postdeploy.sql
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\predeploy.sql
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\QLPhongTroDB.dll
+D:\Official_Project\nghiencuukhoahoc\DDST\QLPhongTroDB\obj\Debug\QLPhongTroDB.pdb

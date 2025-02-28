@@ -22,8 +22,15 @@ EXEC sp_configure 'clr strict security', 0;
 RECONFIGURE;
 GO
 
+/*
+EXEC sp_configure 'show advanced options', 1; → Bật tùy chọn nâng cao.
+EXEC sp_configure 'clr enabled', 1; → Bật hỗ trợ CLR (Common Language Runtime).
+EXEC sp_configure 'clr strict security', 0; → Tắt chế độ bảo mật nghiêm ngặt để sử dụng tSQLt.
+RECONFIGURE; → Áp dụng thay đổi.
+*/
+
 -- 4. Tạo schema kiểm thử (Tên phải đồng nhất)
-EXEC tSQLt.NewTestClass 'TestEmployees1';
+EXEC tSQLt.NewTestClass 'TestEmployees1'; --Tạo schema TestEmployees1 để chứa các test case.
 GO
 
 -- 5. Kiểm thử 1: Kiểm tra bảng Employees1 không rỗng
@@ -31,10 +38,10 @@ CREATE PROCEDURE TestEmployees1.[test EmployeeTableNotEmpty]
 AS
 BEGIN
     DECLARE @Actual INT;
-    SELECT @Actual = COUNT(*) FROM Employees1; -- Đổi từ Employees -> Employees1
+    SELECT @Actual = COUNT(*) FROM Employees1;  --- Đếm số nhân viên trong bảng
 
     -- So sánh kết quả mong đợi (phải có ít nhất 1 nhân viên)
-    EXEC tSQLt.AssertEquals @Expected = 1, @Actual = @Actual;  -- SỬA LỖI Ở ĐÂY
+    EXEC tSQLt.AssertEquals @Expected = 1, @Actual = @Actual;  -
 END;
 GO
 
@@ -54,7 +61,7 @@ BEGIN
     SELECT @Actual = COUNT(*) FROM Employees1 WHERE EmployeeID = @EmployeeID;
 
     -- So sánh kết quả mong đợi
-    EXEC tSQLt.AssertEquals @Expected = 1, @Actual = @Actual;  -- SỬA LỖI Ở ĐÂY
+    EXEC tSQLt.AssertEquals @Expected = 1, @Actual = @Actual;  
 
     -- Xóa dữ liệu kiểm thử
     DELETE FROM Employees1 WHERE EmployeeID = @EmployeeID;
